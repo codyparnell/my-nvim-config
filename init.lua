@@ -33,3 +33,5 @@ vim.api.nvim_create_user_command("Ct", function()
     end
   end)
 end, {})
+
+vim.api.nvim_set_keymap("n", "++", ":w<CR>", { noremap = true, silent = true })
