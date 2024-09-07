@@ -6,6 +6,11 @@ vim.cmd([[
   autocmd VimEnter * if empty(glob('~/.config/coc/extensions/node_modules/coc-spell-checker')) | execute 'CocInstall coc-spell-checker' | endif
 ]])
 
+-- Automatically install coc-actions on startup
+vim.cmd([[
+  autocmd VimEnter * if empty(glob('~/.config/coc/extensions/node_modules/coc-actions')) | execute 'CocInstall coc-actions' | endif
+]])
+
 -- copies ts type to the clipboard
 vim.api.nvim_create_user_command("Ct", function()
   local params = vim.lsp.util.make_position_params()
