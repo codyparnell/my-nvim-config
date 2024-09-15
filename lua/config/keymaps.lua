@@ -18,3 +18,9 @@ vim.api.nvim_set_keymap(
 
 -- better saving
 vim.api.nvim_set_keymap("n", "++", ":w<CR>", { noremap = true, silent = true })
+
+-- better saving
+vim.api.nvim_set_keymap("n", "++", ":w<CR>", { noremap = true, silent = true })
+
+-- vim.api.nvim_set_keymap("n", "<leader>aa", ":CodeCompanionToggle<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("v", "<leader>aa", ":CodeCompanionToggle<CR>", { noremap = true, silent = true })

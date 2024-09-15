@@ -11,6 +11,58 @@ vim.cmd([[
   autocmd VimEnter * if empty(glob('~/.config/coc/extensions/node_modules/coc-actions')) | execute 'CocInstall coc-actions' | endif
 ]])
 
+-- Set colorscheme to catppuccin
+require("catppuccin").setup({
+  transparent_background = true,
+})
+
+vim.cmd([[colorscheme catppuccin]])
+vim.cmd([[TransparentEnable]])
+
+-- require("transparent").setup({
+--   -- table: default groups
+--   groups = {
+--     "Normal",
+--     "NormalNC",
+--     "Comment",
+--     "Constant",
+--     "Special",
+--     "Identifier",
+--     "Statement",
+--     "PreProc",
+--     "Type",
+--     "Underlined",
+--     "Todo",
+--     "String",
+--     "Function",
+--     "Conditional",
+--     "Repeat",
+--     "Operator",
+--     "Structure",
+--     "LineNr",
+--     "NonText",
+--     "SignColumn",
+--     "CursorLine",
+--     "CursorLineNr",
+--     "StatusLine",
+--     "StatusLineNC",
+--     "EndOfBuffer",
+--   },
+--   -- table: additional groups that should be cleared
+--   extra_groups = {
+--     "NeoTreeNormal", -- Adjust the group names according to Neo-tree's highlight groups
+--     "NeoTreeNormalNC",
+--     "NeoTreeStatusLine",
+--   },
+--   -- table: groups you don't want to clear
+--   exclude_groups = { -- List of groups to exclude from transparency
+--     "TelescopeNormal",
+--   },
+--   -- function: code to be executed after highlight groups are cleared
+--   -- Also the user event "TransparentClear" will be triggered
+--   on_clear = function() end,
+-- })
+
 -- copies ts type to the clipboard
 vim.api.nvim_create_user_command("Ct", function()
   local params = vim.lsp.util.make_position_params()
@@ -64,3 +116,4 @@ end, {})
 --     end,
 --   },
 -- })
+--
