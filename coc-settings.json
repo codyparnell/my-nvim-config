@@ -4,6 +4,7 @@
     "VITE",
     "nexe",
     "supabase",
-    "vercel"
+    "vercel",
+    "vitest"
   ]
 }
