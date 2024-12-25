@@ -1,10 +1,14 @@
-return {
-  "xiyaowong/transparent.nvim",
-  config = function()
-    require("transparent").setup({
-      -- Configuration options
-      enable = true, -- Set to false to disable transparency
-      -- Other options can be added here
-    })
-  end,
-}
+return {}
+-- return {
+--   {
+--     "nvim-treesitter/nvim-treesitter",
+--     opts = {
+--       incremental_selection = {
+--         keymaps = {
+--           init_selection = "<F8>",
+--           node_incremental = "<F8>",
+--         },
+--       },
+--     },
+--   },
+-- }
