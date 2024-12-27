@@ -27,3 +27,15 @@ vim.cmd([[colorscheme catppuccin]])
 -- vim.cmd([[TransparentEnable]])
 
 vim.opt.breakindent = true
+
+require("nvim-treesitter.configs").setup({
+  ensure_installed = { "javascript", "markdown" }, -- Install all maintained parsers
+  sync_install = false, -- Install parsers synchronously (only applied to `ensure_installed`)
+  ignore_install = {}, -- List of parsers to ignore installing
+  auto_install = true, -- Automatically install missing parsers when entering buffer
+  highlight = {
+    enable = true, -- Enable for all filetypes
+    disable = { "plaintext", "text", "gitattributes" }, -- Disable for these filetypes
+  },
+  modules = {},
+})
