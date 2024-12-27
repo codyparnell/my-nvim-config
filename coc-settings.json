@@ -3,11 +3,15 @@
     "AUTOINCREMENT",
     "Photobooth",
     "Plaiceholder",
+    "Scrolly",
     "Swiper",
     "VITE",
+    "homescreen",
     "nexe",
+    "strapi",
     "supabase",
     "tanstack",
+    "usehooks",
     "vercel",
     "vitest"
   ]
