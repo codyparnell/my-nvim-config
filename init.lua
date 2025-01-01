@@ -39,3 +39,38 @@ require("nvim-treesitter.configs").setup({
   },
   modules = {},
 })
+
+local cmp = require("cmp")
+
+-- Get the existing configuration
+local current_config = cmp.get_config()
+
+--set color
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#0F111A" })
+
+-- Merge new settings with the existing configuration
+local new_config = {
+  window = {
+    border = "rounded",
+    completion = {
+      border = "rounded",
+      winhighlight = "Normal:CmpNormal,FloatBorder:CmpNormal",
+    }, -- Enable border for completion window
+    documentation = {
+      border = "rounded",
+      winhighlight = "Normal:CmpNormal,FloatBorder:CmpNormal",
+    },
+  },
+  -- Add or modify other settings as needed
+}
+
+-- Apply the merged configuration
+cmp.setup(vim.tbl_deep_extend("force", current_config, new_config))
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
+
+vim.diagnostic.config({
+  float = {
+    border = "rounded",
+  },
+})
