@@ -54,6 +54,7 @@ local new_config = {
     border = "rounded",
     completion = {
       border = "rounded",
+
       winhighlight = "Normal:CmpNormal,FloatBorder:CmpNormal",
     }, -- Enable border for completion window
     documentation = {
@@ -74,3 +75,6 @@ vim.diagnostic.config({
     border = "rounded",
   },
 })
+
+-- added better hovering
+-- need to make cmp menu have the same backgroud vib as the hover
