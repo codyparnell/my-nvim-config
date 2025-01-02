@@ -29,8 +29,8 @@ vim.cmd([[colorscheme catppuccin]])
 vim.opt.breakindent = true
 
 require("nvim-treesitter.configs").setup({
-  ensure_installed = { "javascript", "markdown" }, -- Install all maintained parsers
-  sync_install = false, -- Install parsers synchronously (only applied to `ensure_installed`)
+  ensure_installed = { "javascript", "markdown", "typescript" }, -- Install all maintained parsers
+  sync_install = true, -- Install parsers synchronously (only applied to `ensure_installed`)
   ignore_install = {}, -- List of parsers to ignore installing
   auto_install = true, -- Automatically install missing parsers when entering buffer
   highlight = {
