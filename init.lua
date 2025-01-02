@@ -46,8 +46,9 @@ local cmp = require("cmp")
 local current_config = cmp.get_config()
 
 -- Set color
-vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#0F111A", blend = 0 })
-vim.api.nvim_set_hl(0, "CmpBorder", { bg = "#0F111A", fg = "#89b4fa", blend = 0 })
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "NONE", ctermbg = "NONE", fg = "#9399b2", ctermfg = "NONE", blend = 0 })
+vim.api.nvim_set_hl(0, "CmpBorder", { bg = "NONE", fg = "#9399b2", blend = 0 })
+vim.api.nvim_set_hl(0, "CmpBorderDocs", { bg = "NONE", fg = "#89b4fa", blend = 0 })
 
 -- Merge new settings with the existing configuration
 local new_config = {
@@ -59,10 +60,16 @@ local new_config = {
     }, -- Enable border for completion window
     documentation = {
       border = "rounded",
-      winhighlight = "Normal:CmpNormal,FloatBorder:CmpBorder", -- Removed trailing comma
+      winhighlight = "Normal:CmpNormal,FloatBorder:CmpBorderDocs", -- Removed trailing comma
     },
   },
 }
-
 -- Apply the merged configuration
 cmp.setup(vim.tbl_deep_extend("force", current_config, new_config))
+
+-- Set the background color to 'none' for the Mason LSP autocomplete menu
+vim.api.nvim_set_hl(0, "CmpItemAbbr", { bg = "none" }) -- Foreground color can be adjusted as needed
+vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { bg = "none" })
+vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { bg = "none" })
+vim.api.nvim_set_hl(0, "CmpItemKind", { bg = "none" })
+vim.api.nvim_set_hl(0, "CmpItemMenu", { bg = "none" })
