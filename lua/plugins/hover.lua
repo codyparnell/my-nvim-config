@@ -16,7 +16,7 @@ return {
           -- require('hover.providers.dictionary')
         end,
         preview_opts = {
-          border = "single",
+          border = "rounded",
         },
         -- Whether the contents of a currently open hover window should be moved
         -- to a :h preview-window when pressing the hover keymap.
@@ -39,8 +39,8 @@ return {
       end, { desc = "hover.nvim (next source)" })
 
       -- Mouse support
-      vim.keymap.set("n", "<MouseMove>", require("hover").hover_mouse, { desc = "hover.nvim (mouse)" })
-      vim.o.mousemoveevent = true
+      -- vim.keymap.set("n", "<MouseMove>", require("hover").hover_mouse, { desc = "hover.nvim (mouse)" })
+      -- vim.o.mousemoveevent = true
     end,
   },
 }

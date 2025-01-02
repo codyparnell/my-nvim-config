@@ -45,8 +45,9 @@ local cmp = require("cmp")
 -- Get the existing configuration
 local current_config = cmp.get_config()
 
---set color
-vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#0F111A" })
+-- Set color
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#0F111A", blend = 0 })
+vim.api.nvim_set_hl(0, "CmpBorder", { bg = "#0F111A", fg = "#89b4fa", blend = 0 })
 
 -- Merge new settings with the existing configuration
 local new_config = {
@@ -54,27 +55,14 @@ local new_config = {
     border = "rounded",
     completion = {
       border = "rounded",
-
-      winhighlight = "Normal:CmpNormal,FloatBorder:CmpNormal",
+      winhighlight = "Normal:CmpNormal,FloatBorder:CmpBorder",
     }, -- Enable border for completion window
     documentation = {
       border = "rounded",
-      winhighlight = "Normal:CmpNormal,FloatBorder:CmpNormal",
+      winhighlight = "Normal:CmpNormal,FloatBorder:CmpBorder", -- Removed trailing comma
     },
   },
-  -- Add or modify other settings as needed
 }
 
 -- Apply the merged configuration
 cmp.setup(vim.tbl_deep_extend("force", current_config, new_config))
-
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
-
-vim.diagnostic.config({
-  float = {
-    border = "rounded",
-  },
-})
-
--- added better hovering
--- need to make cmp menu have the same backgroud vib as the hover
