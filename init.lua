@@ -11,13 +11,6 @@ require("config.lazy")
 --   autocmd VimEnter * if empty(glob('~/.config/coc/extensions/node_modules/coc-actions')) | execute 'CocInstall coc-actions' | endif
 -- ]])
 
--- makes rezsizing snappy
-require("mini.animate").setup({
-  resize = {
-    enable = false,
-  },
-})
-
 -- Set colorscheme to catppuccin
 require("catppuccin").setup({
   transparent_background = true,
