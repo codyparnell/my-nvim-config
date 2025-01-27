@@ -30,7 +30,7 @@ end
 
 local os_name = detect_os()
 
-if os_name == "Windows" then
+if os_name == "Windows" or os_name == "Linux" or os_name == "WSL" then
   return {
     {
       "nvim-treesitter/nvim-treesitter",
