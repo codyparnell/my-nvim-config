@@ -2,11 +2,13 @@
   "suggest.autoTrigger": "none",
   "cSpell.userWords": [
     "AUTOINCREMENT",
+    "DMNO",
     "Photobooth",
     "Plaiceholder",
     "SOCKETIO",
     "Scrolly",
     "Swiper",
+    "TRPC",
     "VITE",
     "Vuplex",
     "homescreen",
