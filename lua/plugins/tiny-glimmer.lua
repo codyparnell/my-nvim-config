@@ -1,9 +1,10 @@
-return {
-  {
-    "rachartier/tiny-glimmer.nvim",
-    event = "TextYankPost",
-    opts = {
-      -- your configuration
-    },
-  },
-}
+return {}
+-- return {
+--   {
+--     "rachartier/tiny-glimmer.nvim",
+--     event = "TextYankPost",
+--     opts = {
+--       -- your configuration
+--     },
+--   },
+-- }
