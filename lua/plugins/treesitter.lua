@@ -34,6 +34,16 @@ if os_name == "Windows" or os_name == "Linux" or os_name == "WSL" then
   return {
     {
       "nvim-treesitter/nvim-treesitter",
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = "<F8>",
+          node_incremental = "<F8>",
+        },
+      },
+      lazy = false,
+      branch = "main",
+      build = ":TSUpdate",
       opts = {
         incremental_selection = {
           keymaps = {

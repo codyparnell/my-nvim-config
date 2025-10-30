@@ -13,10 +13,14 @@ require("config.lazy")
 
 -- Set colorscheme to catppuccin
 require("catppuccin").setup({
-  transparent_background = true,
+  float = {
+    transparent = false,
+    solid = false,
+  },
+  transparent_background = false,
 })
 
-vim.cmd([[colorscheme catppuccin]])
+vim.cmd([[colorscheme tokyonight-night]])
 -- vim.cmd([[TransparentEnable]])
 
 vim.opt.breakindent = true

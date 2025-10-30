@@ -11,6 +11,7 @@
     "Seastat",
     "Swiper",
     "TRPC",
+    "TWILIO",
     "VITE",
     "Vuplex",
     "debrifinging",
@@ -24,6 +25,7 @@
     "supabase",
     "tanstack",
     "usehooks",
+    "uuidv",
     "vercel",
     "vitest"
   ]
