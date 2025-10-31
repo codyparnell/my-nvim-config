@@ -1,8 +1,14 @@
 return {
   "neovim/nvim-lspconfig",
-  opts = function()
-    local keys = require("lazyvim.plugins.lsp.keymaps").get()
-    -- disable a keymap
-    keys[#keys + 1] = { "K", false }
-  end,
+  opts = {
+    servers = {
+      ["*"] = {
+        keys = {
+          -- Example: disable "K" and add "gd" for definition
+          { "K", false },
+          -- { "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", has = "definition" },
+        },
+      },
+    },
+  },
 }

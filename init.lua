@@ -14,12 +14,13 @@ require("config.lazy")
 -- Set colorscheme to catppuccin
 require("catppuccin").setup({
   float = {
-    transparent = false,
+    -- transparent = true,
     solid = false,
   },
-  transparent_background = false,
+  -- transparent_background = true,
 })
 
+-- vim.cmd([[colorscheme catppuccin]])
 vim.cmd([[colorscheme tokyonight-night]])
 -- vim.cmd([[TransparentEnable]])
 
@@ -57,8 +58,8 @@ local new_config = {
 cmp.setup(vim.tbl_deep_extend("force", current_config, new_config))
 
 -- Set the background color to 'none' for the Mason LSP autocomplete menu
--- vim.api.nvim_set_hl(0, "CmpItemAbbr", { bg = "none" }) -- Foreground color can be adjusted as needed
--- vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { bg = "none" })
--- vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { bg = "none" })
--- vim.api.nvim_set_hl(0, "CmpItemKind", { bg = "none" })
--- vim.api.nvim_set_hl(0, "CmpItemMenu", { bg = "none" })
+vim.api.nvim_set_hl(0, "CmpItemAbbr", { bg = "none" }) -- Foreground color can be adjusted as needed
+vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { bg = "none" })
+vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { bg = "none" })
+vim.api.nvim_set_hl(0, "CmpItemKind", { bg = "none" })
+vim.api.nvim_set_hl(0, "CmpItemMenu", { bg = "none" })

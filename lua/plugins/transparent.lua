@@ -1,14 +1,6 @@
-return {}
--- return {
---   {
---     "nvim-treesitter/nvim-treesitter",
---     opts = {
---       incremental_selection = {
---         keymaps = {
---           init_selection = "<F8>",
---           node_incremental = "<F8>",
---         },
---       },
---     },
---   },
--- }
+-- return {}
+return {
+  -- {
+  --   "nvim-treesitter/nvim-treesitter",
+  -- },
+}
