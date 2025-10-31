@@ -28,11 +28,11 @@ vim.opt.breakindent = true
 
 -- Set color ( these are colors for catppuccin, these will neeed to change if i use a different theme)
 -- todo: make these react to the colorscheme
-vim.api.nvim_set_hl(0, "CmpNormal", { bg = "NONE", ctermbg = "NONE", fg = "#9399b2", ctermfg = "NONE", blend = 0 })
-vim.api.nvim_set_hl(0, "CmpBorder", { bg = "NONE", fg = "#9399b2", blend = 0 })
-vim.api.nvim_set_hl(0, "CmpBorderDocs", { bg = "NONE", fg = "#89b4fa", blend = 0 })
-
-vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { bg = "NONE", fg = "#89b4fa", blend = 0 })
+-- vim.api.nvim_set_hl(0, "CmpNormal", { bg = "NONE", ctermbg = "NONE", fg = "#9399b2", ctermfg = "NONE", blend = 0 })
+-- vim.api.nvim_set_hl(0, "CmpBorder", { bg = "NONE", fg = "#9399b2", blend = 0 })
+-- vim.api.nvim_set_hl(0, "CmpBorderDocs", { bg = "NONE", fg = "#89b4fa", blend = 0 })
+--
+-- vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { bg = "NONE", fg = "#89b4fa", blend = 0 })
 
 -- changing the cmp colors
 local cmp = require("cmp")
@@ -46,11 +46,11 @@ local new_config = {
     border = "rounded",
     completion = {
       border = "rounded",
-      winhighlight = "Normal:CmpNormal,FloatBorder:CmpBorder",
+      -- winhighlight = "Normal:CmpNormal,FloatBorder:CmpBorder",
     }, -- Enable border for completion window
     documentation = {
       border = "rounded",
-      winhighlight = "Normal:CmpNormal,FloatBorder:CmpBorderDocs", -- Removed trailing comma
+      -- winhighlight = "Normal:CmpNormal,FloatBorder:CmpBorderDocs", -- Removed trailing comma
     },
   },
 }
@@ -58,8 +58,8 @@ local new_config = {
 cmp.setup(vim.tbl_deep_extend("force", current_config, new_config))
 
 -- Set the background color to 'none' for the Mason LSP autocomplete menu
-vim.api.nvim_set_hl(0, "CmpItemAbbr", { bg = "none" }) -- Foreground color can be adjusted as needed
-vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { bg = "none" })
-vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { bg = "none" })
-vim.api.nvim_set_hl(0, "CmpItemKind", { bg = "none" })
-vim.api.nvim_set_hl(0, "CmpItemMenu", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "CmpItemAbbr", { bg = "none" }) -- Foreground color can be adjusted as needed
+-- vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "CmpItemKind", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "CmpItemMenu", { bg = "none" })

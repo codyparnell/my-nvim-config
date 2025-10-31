@@ -27,7 +27,8 @@
     "usehooks",
     "uuidv",
     "vercel",
-    "vitest"
+    "vitest",
+    "webm"
   ]
 }
 
